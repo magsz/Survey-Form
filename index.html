@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 id="title">Tattoo Survey Form</h1>
+            <p id="description">Please take a monent to fill out this survey regarding your experience with tattoos.</p>
+        </div>
+        <!-- This is the survey form div
+             will hold all of parts of survey form
+        -->
+        <form action="" id="survey-form">
+            <!-- div "form-group" - groups all parts of survey askig for information -->
+            <!-- Input section ( User will manually input information that is being asked for )-->
+            <div class="form-group">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="number" id="number-label">Age</label>
+                <input type="number" name="age" id="number" min="18" max="99" placeholder="Enter your age" class="form-control" required>
+            </div>
+            <!-- Dropdown section/form-group (user will select from a fropdown menu)-->
+            <div class="form-group">
+                <p>What size tattoo are you interested in? </p>
+                <select name="tattoo-size" id="dropdown" class="form-control" required>Select a size
+                    <option disabled selected> Select a size </option>
+                    <option value="small">Small</option>
+                    <option value="half-sleeve">Half Sleeve</option>
+                    <option value="full-sleeve">Full Sleeve</option>
+                    <option value="body-suit">Body Suit</option>
+                </select>
+            </div>
+            <!-- radio button section (user will select a radio button to answer question)-->
+            <div class="form-group">
+                <p>Have you been tattooed before?</p>
+                <label for="">
+                    <input type="radio" value="yes" name="yes-no" id="input-yes"class="input-radio">
+                    Yes
+                </label>
+                <label for="">
+                    <input type="radio" value="no" name="yes-no" id="input-no" class="input-radio">
+                    No
+                </label>
+            </div>
+            <!-- Checkbox section/form-group (user will select each checkbox that applies to answer question/submit information)-->
+            <div class="form-group">
+                <p>What styles of tattoos do you prefer?</p>
+                <span class="clue">(Check all that apply)</span>
+                <label for="">
+                    <input type="checkbox" value="traditional" class="input-checkbbox">Traditional
+                </label>
+                <label for="">
+                    <input type="checkbox" value="japanese" class="input-checkbbox">Japanese
+                </label>
+                <label for="">
+                    <input type="checkbox" value="fine-lineclass"input-checkbbox">Fine Line
+                </label>
+                <label for="">
+                    <input type="checkbox" value="neo-traditional" class="input-checkbbox">Neo Traditional
+                </label>
+                <label for="">
+                    <input type="checkbox" value="black-work" class="input-checkbbox">Blackwork
+                </label>
+            </div>
+            <!-- textarea section (user will submit text in this section)-->
+            <div class="form-group">
+                <p>If you have any questions or comments please enter them below: </p>
+                <textarea name="comment" id="comments" cols="30" rows="10" class="input-textarea" placeholder=" Enter comment or questions here..."></textarea>
+            </div>
+            <!-- Button Section (user will click button to submit)-->
+            <div class="form-group-button">
+                <button type="submit" id="submit" class="submit-button"> Submit </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
